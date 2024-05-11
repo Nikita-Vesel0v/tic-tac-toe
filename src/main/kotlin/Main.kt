@@ -62,7 +62,7 @@ fun makeMove(field: List<MutableList<String>>): List<MutableList<String>> {
             val (i, j) = readln().split(" ").map { it.toInt() }
             when {
                 i > 3 || j > 3 || i < 1 || j < 1 -> println("Coordinates should be from 1 to 3!")
-                field[i - 1][j - 1] == "O" -> println("This cell is occupied! Choose another one!")
+                field[i - 1][j - 1] == "O" || field[i - 1][j - 1] == "X" -> println("This cell is occupied! Choose another one!")
                 else -> {
                     field[i - 1][j - 1] = "X"
                     break
