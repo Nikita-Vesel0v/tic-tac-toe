@@ -1,3 +1,14 @@
+import kotlin.random.Random
+
 fun main() {
-    println("Hello! It's Simple Tic-Tac-Toe Project")
+    battleField()
+}
+
+fun battleField() {
+    val field = List(3) {
+        Array(3) { if (Random.nextBoolean()) "X" else "O" }
+    }
+
+    field.forEach{ println(it.joinToString(" ")) }
+
 }
