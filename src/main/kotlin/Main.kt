@@ -15,8 +15,8 @@ fun main() {
     }
 }
 
-fun createBattleField(random: String = "No random"): List<MutableList<String>> =
-    if (random != "random") List(3) { MutableList(3) { " " } }
+fun createBattleField(random: Boolean = false): List<MutableList<String>> =
+    if (!random) List(3) { MutableList(3) { " " } }
     else List(3) { MutableList(3) { if (Random.nextBoolean()) "X" else "O" } }
 
 fun checkWinner(): String {
